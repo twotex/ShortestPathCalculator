@@ -224,7 +224,26 @@ string ShortestPath(string strArr[], int arrLength) {
 
 int main(void) {
 
-    // keep this function call here
+    /*
+    This program takes in a string array as input.
+    The first string of the array is a number, which we'll call "n", specifying the number of interest points. (Example: "7")
+    The next n strings of the array will be the names of the interest points. (Example: "Krusty Krab", "Springfield", "Sin City", "Hollywood", "Gotham City")
+    All strings after the last named interest point represent connections between the interest points. 
+    A dash is used to seperate the first interest point from its connnected counterpart. (Example: "Krusty Krab-Springfield", "Sin City-Hollywood", "Springfield-Gothem City"
+    Interest points that are connected can travel between one another
+
+
+    The objective of this program is to take a specified number of interest points and connections between them and calculate the shortest route from
+    the first interest point given to the last interest point given.
+    If we are given the array: {"7", "A", "B", "C", "D", "E", "F", "G", "A-B", "A-E", "B-C", "C-D", "D-F", "E-D", "F-G"},
+    We have 7 interest points, which are {"A", "B", "C", "D", "E", "F", "G"}.
+    Our goal is to calculate the shortest path from from A to G
+    The connected interest points are {"A-B", "A-E", "B-C", "C-D", "D-F", "E-D", "F-G"}
+    The shortest route would then be: A-E-D-F-G
+
+
+    */
+    
     string A[] = { "7", "A", "B", "C", "D", "E", "F", "G", "A-B", "A-E", "B-C", "C-D", "D-F", "E-D", "F-G" };
     int arrLength = sizeof(A) / sizeof(*A);
     cout << ShortestPath(A, arrLength);
